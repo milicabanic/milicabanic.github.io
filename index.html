@@ -5,7 +5,7 @@
     <style>
       body {
         font-family: 'Roboto Condensed', sans-serif;
-        background-color: #C8D6DB;
+        background-color: #24405a;
         text-align: center;
         padding: 100px; 
       }
@@ -13,7 +13,7 @@
         margin: 50px;
       }
       .title {
-        color: #DB5004;
+        color: #b82b02;
       }
       .p1 {
         color: #ED5B0C;
@@ -27,16 +27,35 @@
       .p4 {
         color: #EDB10C;
       }
-      
+      @keyframes fadein {
+        from { opacity: 0}
+        tp {opacity: 1}
+      }
+      .fadein {
+        animation: fadein 1s;
+        animation-fill-mode: both;
+      }
+      .first {
+        animation-delay: 0s;
+      }
+      .second {
+        animation-delay: 1s;
+      }
+      .third {
+        animation-delay: 2s;
+      }
+      .fourth {
+        animation-delay: 3s;
+      }
       
     </style>
   </head>
   <body>
   <h1 class="title">Milica Banic</h1>
-  <p class="p1">Engineering Student</p>
-  <p class="p2">Varsity Rower</p>
-  <p class="p3">Avid Peach Juice Drinker</p>
-  <p class="p4">Novice html Enthusiast</p>
-  <img src='juice.png'/>
+  <p class="p1 fadein first">Engineering Student</p>
+  <p class="p2 fadein second">Varsity Rower</p>
+  <p class="p3 fadein third">Avid Peach Juice Drinker</p>
+  <p class="p4 fadein fourth">Novice html Enthusiast</p>
+  <img class="fadein" src='juice.png'/>
   </body>
 </html>
